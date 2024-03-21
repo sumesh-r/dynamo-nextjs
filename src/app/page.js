@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { ddbDocClient } from "@/config/ddbDocClient.js";
+import { ddbDocClient } from "@/config/dbconfig";
 import { ScanCommand } from "@aws-sdk/lib-dynamodb";
 import { DeleteCommand } from "@aws-sdk/lib-dynamodb";
 import Link from "next/link";

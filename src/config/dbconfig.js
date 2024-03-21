@@ -1,4 +1,5 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
 // Set the AWS Region.
 const REGION = "ap-south-1";
@@ -11,4 +12,19 @@ const ddbClient = new DynamoDBClient({
   },
 });
 
-export { ddbClient };
+const marshallOptions = {
+  convertEmptyValues: false, 
+  removeUndefinedValues: true,
+  convertClassInstanceToMap: false,
+};
+
+const unmarshallOptions = {
+  wrapNumbers: false, 
+};
+
+const ddbDocClient = DynamoDBDocumentClient.from(ddbClient, {
+  marshallOptions,
+  unmarshallOptions,
+});
+
+export { ddbDocClient };

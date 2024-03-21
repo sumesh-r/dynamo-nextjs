@@ -1,6 +1,6 @@
 "use client";
 import { PutCommand } from "@aws-sdk/lib-dynamodb";
-import { ddbDocClient } from "@/config/ddbDocClient";
+import { ddbDocClient } from "@/config/dbconfig";
 import { useRouter } from "next/navigation";
 
 export default function AddUser() {
