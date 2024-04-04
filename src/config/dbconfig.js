@@ -13,13 +13,13 @@ const ddbClient = new DynamoDBClient({
 });
 
 const marshallOptions = {
-  convertEmptyValues: false, 
+  convertEmptyValues: false,
   removeUndefinedValues: true,
   convertClassInstanceToMap: false,
 };
 
 const unmarshallOptions = {
-  wrapNumbers: false, 
+  wrapNumbers: false,
 };
 
 const ddbDocClient = DynamoDBDocumentClient.from(ddbClient, {

@@ -85,11 +85,7 @@ export default function Home() {
               <tbody>
                 {tableData &&
                   tableData.map((row, idx) => (
-                    <tr
-                      scope="row"
-                      key={idx}
-                      className="border-b dark:border-gray-700"
-                    >
+                    <tr scope="row" key={idx} className="border-b dark:border-gray-700">
                       <td className="text-center py-3">{row.id}</td>
                       <td className="text-center py-3">{row.firstName}</td>
                       <td className="text-center py-3">{row.lastName}</td>
